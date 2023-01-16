@@ -10,12 +10,13 @@ function Tables({transaction}){
                <td>{current.amount}</td>  
             </tr>
    })
+
     return(
         <>
         <div>
             <div className="container-fluid">
-                    <form  className="d-flex" role="search">
-                        <input  className="form-control me-2" type="search" placeholder="Enter description to search" aria-label="Search"/>
+                    <form onSubmit={()=>{}} className="d-flex" role="search">
+                        <input  onChange={()=>{}}className="form-control me-2" type="search" placeholder="Enter description to search" aria-label="Search"/>
                     </form>
                 </div>
             </div>

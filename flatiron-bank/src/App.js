@@ -7,18 +7,23 @@ import Tables from './Component/Tables';
 
 function App() {
   const[pot,setPot]=useState([])
+  const[spot,setSpot]=useState([])
+
   
   useEffect ( ()=> {
     fetch ("http://localhost:3000/transactions")
     .then ((r)=> r.json ())
     .then ((data)=> setPot(data))},
     [])
+    function postData(data){
+      setSpot([...spot,data])
+    }
 
   return (
     
     <div className="App">
         <Navbar/>
-        <Forms/>
+        <Forms addData={postData}/>
         <Tables transaction={pot}/>  
     </div>
   );
