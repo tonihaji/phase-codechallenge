@@ -9,7 +9,9 @@ function Tables({transaction}){
 function handleChange(e){
     setBlue(e.target.value)
 }
-   const mapData=transaction
+   const mapData=transaction.filter ((pik)=> {
+    return blue === "" ? pik : pik.description.includes (blue)
+})
    .map((current)=>{
     return  <tr key={current.id}>
                <td>{current.date}</td>
@@ -18,6 +20,7 @@ function handleChange(e){
                <td>{current.amount}</td>  
             </tr>
    })
+   
 
     return(
         <>
