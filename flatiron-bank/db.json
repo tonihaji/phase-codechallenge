@@ -177,6 +177,55 @@
       "amount": "43333",
       "": "liqbility",
       "id": 24
+    },
+    {
+      "date": "",
+      "description": "",
+      "category": "",
+      "amount": "",
+      "id": 25
+    },
+    {
+      "date": "2023-01-11",
+      "description": "rent",
+      "category": "expense",
+      "amount": "6600",
+      "id": 26
+    },
+    {
+      "date": "2023-01-11",
+      "description": "rent",
+      "category": "expense",
+      "amount": "6600",
+      "id": 27
+    },
+    {
+      "date": "2023-01-11",
+      "description": "rent",
+      "category": "expense",
+      "amount": "6600",
+      "id": 28
+    },
+    {
+      "date": "2023-01-11",
+      "description": "fees",
+      "category": "jjjjjjjj",
+      "amount": "6000",
+      "id": 29
+    },
+    {
+      "date": "2023-01-11",
+      "description": "fees",
+      "category": "jjjjjjjj",
+      "amount": "6000",
+      "id": 30
+    },
+    {
+      "date": "2023-01-11",
+      "description": "fees",
+      "category": "jjjjjjjj",
+      "amount": "6000",
+      "id": 31
     }
   ]
 }

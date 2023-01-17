@@ -9,9 +9,7 @@ function Tables({transaction}){
 function handleChange(e){
     setBlue(e.target.value)
 }
-   const mapData=transaction.filter((cat)=>{
-     return blue===""? cat : cat.description.includes(cat)
-   })
+   const mapData=transaction
    .map((current)=>{
     return  <tr key={current.id}>
                <td>{current.date}</td>
