@@ -1,8 +1,18 @@
 import React,{useState} from "react";
 
+
 function Tables({transaction}){
    const[blue,setBlue]=useState([])
-   const mapData=transaction.map((current)=>{
+   function handleSubmit(e){
+    e.preventDefault()
+}
+function handleChange(e){
+    setBlue(e.target.value)
+}
+   const mapData=transaction.filter((cat)=>{
+     return blue===""? cat : cat.description.includes(cat)
+   })
+   .map((current)=>{
     return  <tr key={current.id}>
                <td>{current.date}</td>
                <td>{current.description}</td>
@@ -15,8 +25,8 @@ function Tables({transaction}){
         <>
         <div>
             <div className="container-fluid">
-                    <form onSubmit={()=>{}} className="d-flex" role="search">
-                        <input  onChange={()=>{}}className="form-control me-2" type="search" placeholder="Enter description to search" aria-label="Search"/>
+                    <form onSubmit={handleSubmit} className="d-flex" role="search">
+                        <input  onChange={handleChange}className="form-control me-2" type="search" placeholder="Enter description to search" aria-label="Search"/>
                     </form>
                 </div>
             </div>
